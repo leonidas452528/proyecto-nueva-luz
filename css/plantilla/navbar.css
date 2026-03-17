@@ -2,9 +2,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 5%;
     background-color: #F5F5F5;
     font-family: 'Arial', sans-serif;
+    position: relative;
+    z-index: 1000;
 }
 
 /* Estilo del Logo */
@@ -12,6 +14,8 @@ nav h2 {
     font-size: 1.2rem;
     color: #000;
     margin: 0;
+    flex-grow: 1;
+    margin-left: 10px;
 }
 
 /* Estilos de la lista (Menú central) */
@@ -21,6 +25,10 @@ nav ul {
     margin: 0;
     padding: 0;
     gap: 15px; /* Espaciado entre los botones */
+}
+
+.mobile-only {
+    display: none;
 }
 
 nav ul li a {
@@ -40,10 +48,7 @@ nav ul li a:hover {
 }
 
 /* Css del boton de "Donar Ahora" */
-a {
-    text-decoration: none;
-}
-nav button {
+nav .nav-button-desktop button {
     background-color: #d4ac31; 
     color: white;
     border: none;
@@ -59,7 +64,93 @@ nav button {
 }
 
 /* Hover del boton Donar ahora */
-nav button:hover {
+nav .nav-button-desktop button:hover {
     background-color: #00FF00; /* El mismo verde */
     color: #000;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .nav-button-desktop {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .btn-donar-mobile {
+        background-color: #d4ac31;
+        color: white !important;
+        margin: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    /* Animación Hamburger */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
 }

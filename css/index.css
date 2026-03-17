@@ -417,18 +417,56 @@ body {
     .portal-container {
         flex-direction: column;
         text-align: center;
+        padding: 40px 5%;
     }
     
     .hero-content h1 {
         font-size: 2.5rem;
     }
     
+    .hero-description {
+        font-size: 1rem;
+    }
+    
     .hero-buttons {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
     }
     
     .hero-container {
         text-align: center;
         justify-content: center;
+        padding: 0 5%;
+    }
+
+    .mision-container {
+        padding: 60px 5%;
+    }
+
+    .mision-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .tienda-container {
+        padding: 60px 5%;
+    }
+
+    .tienda-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .portal-formulario {
+        padding: 30px 20px;
     }
 }

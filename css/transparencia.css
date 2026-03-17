@@ -13,7 +13,7 @@ body {
 
 .transparencia-hero {
     text-align: center;
-    padding: 60px 80px 40px;
+    padding: 60px 8% 40px;
     background-color: #ffffff;
 }
 
@@ -51,8 +51,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 0 80px 50px;
+    padding: 0 8% 50px;
     background-color: #ffffff;
+    flex-wrap: wrap;
 }
 
 .stat-card {
@@ -64,6 +65,8 @@ body {
     align-items: center;
     gap: 18px;
     min-width: 280px;
+    flex: 1;
+    max-width: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -105,8 +108,8 @@ body {
     gap: 50px;
     background-color: #f5f5f5;
     border-radius: 20px;
-    padding: 50px 60px;
-    margin: 0 80px 50px;
+    padding: 50px 8%;
+    margin: 0 8% 50px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -227,7 +230,7 @@ body {
 
 .documentos-container {
     text-align: center;
-    padding: 50px 80px 60px;
+    padding: 50px 8% 60px;
     background-color: #ffffff;
 }
 
@@ -240,7 +243,7 @@ body {
 
 .documentos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -319,7 +322,7 @@ body {
 }
 
 .faq-container {
-    padding: 50px 80px 80px;
+    padding: 50px 8% 80px;
     max-width: 900px;
     margin: 0 auto;
     background-color: #f9f9f9;
@@ -371,7 +374,7 @@ body {
     content: '▼';
     font-size: 0.7rem;
     color: #00FF00;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
     flex-shrink: 0;
     margin-left: 15px;
 }
@@ -394,8 +397,8 @@ body {
     .gastos-container {
         flex-direction: column;
         text-align: center;
-        padding: 40px 30px;
-        margin: 0 30px 50px;
+        padding: 40px 5%;
+        margin: 0 5% 50px;
     }
 
     .gastos-list {
@@ -413,7 +416,7 @@ body {
 
 @media (max-width: 768px) {
     .transparencia-hero {
-        padding: 40px 20px 30px;
+        padding: 40px 5% 30px;
     }
 
     .transparencia-hero h1 {
@@ -422,7 +425,7 @@ body {
 
     .stats-container {
         flex-direction: column;
-        padding: 0 20px 40px;
+        padding: 0 5% 40px;
         align-items: center;
     }
 
@@ -432,16 +435,16 @@ body {
     }
 
     .documentos-container {
-        padding: 40px 20px;
+        padding: 40px 5%;
     }
 
     .documentos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 15px;
     }
 
     .faq-container {
-        padding: 40px 20px 60px;
+        padding: 40px 5% 60px;
     }
 
     .faq-item summary {
@@ -455,10 +458,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .documentos-grid {
-        grid-template-columns: 1fr;
-    }
-
     .donut-chart {
         width: 200px;
         height: 200px;
