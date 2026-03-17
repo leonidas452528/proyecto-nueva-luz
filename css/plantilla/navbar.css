@@ -1,0 +1,65 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #F5F5F5;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del Logo */
+nav h2 {
+    font-size: 1.2rem;
+    color: #000;
+    margin: 0;
+}
+
+/* Estilos de la lista (Menú central) */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Espaciado entre los botones */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 15px; /* Espaciado el cual hace que el hover tenfa un efecto visual tipo boton */
+    border-radius: 5px;
+    transition: all 0.5s ease; /* Transicion suave para color y fondo */
+}
+
+/* Coadigo dfel hover para las listas */
+nav ul li a:hover {
+    background-color: #00FF00; 
+    color: #000;               
+}
+
+/* Css del boton de "Donar Ahora" */
+a {
+    text-decoration: none;
+}
+nav button {
+    background-color: #d4ac31; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    transition: all 0.3s ease;
+}
+
+/* Hover del boton Donar ahora */
+nav button:hover {
+    background-color: #00FF00; /* El mismo verde */
+    color: #000;
+}

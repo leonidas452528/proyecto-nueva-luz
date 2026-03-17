@@ -1,0 +1,129 @@
+footer {
+    background-color: #F5F5F5;
+    padding: 60px 80px 40px 80px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Contenedor principal */
+footer > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Estilo para cada columna */
+footer div > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Espacio del logo y la descripcion */
+footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+footer h2::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #00FF00; 
+    border-radius: 50%;
+    margin-right: 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 75%);
+}
+
+footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+    max-width: 300px;
+}
+
+/* --- Colo de los titulos*/
+footer h5 {
+    color: #00FF00; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+}
+
+/* Quitar efecto lista */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 12px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 0.9rem;
+    padding: 6px 12px; /* Espacio para el efecto de botón */
+    border-radius: 5px;
+    display: inline-block; /* Para que el fondo cubra bien el área */
+    transition: all 0.3s ease;
+}
+
+/* Hover estilo boton verde */
+footer ul li a:hover {
+    background-color: #00FF00;
+    color: #000;
+}
+
+/* CSS derechos de autor */
+footer hr {
+    border: 0;
+    border-top: 1px solid #f0f0f0;
+    margin-bottom: 25px;
+}
+
+footer > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+footer > div:last-child a {
+    text-decoration: none;
+    color: #999;
+    margin: 0 5px;
+    padding: 4px 8px; /* Espacio para el efecto de botón */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Hover para enlaces de términos/cookies */
+footer > div:last-child a:hover {
+    background-color: #00FF00;
+    color: #000;
+}
+
+/* Ajuste para dispositivos móviles */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 20px;
+    }
+    footer > div:last-child {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
